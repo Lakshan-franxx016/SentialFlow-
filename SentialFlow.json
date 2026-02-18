@@ -73,7 +73,7 @@
         "url": "https://api.groq.com/openai/v1/chat/completions",
         "sendHeaders": true,
         "specifyHeaders": "json",
-        "jsonHeaders": "{\n  \"Authorization\": \"Bearer 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\",\n  \"Content-Type\": \"application/json\"\n}",
+        "jsonHeaders": "{\n  \"Authorization\": \"Bearer your api key need to be used \",\n  \"Content-Type\": \"application/json\"\n}",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"model\": \"llama-3.1-8b-instant\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a security analyst. Analyze alerts and return ONLY valid JSON.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Analyze this alert. Alert ID: {{ $json.alertId }}, Domain: {{ $json.dstDomain }}. Return JSON with severity (Critical/High/Medium/Low) and reason.\"\n    }\n  ],\n  \"temperature\": 0.1,\n  \"response_format\": {\"type\": \"json_object\"}\n}",
